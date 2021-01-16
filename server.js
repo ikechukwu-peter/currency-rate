@@ -47,7 +47,7 @@ app.get("/api/rates", (req, res) => {
 
 app.all("*", (req, res, next) => {
   res.status(404).json({
-    urlnotfound: `Hello!!! ${req.originalUrl} was not found on this server, make sure it is correct`,
+    urlnotfound: `Hello!!! ${req.originalUrl} was not found on this server. Please go to /api/rates/base(e.g, USD/currency(e.g, EUR)`,
   });
   next();
 });
